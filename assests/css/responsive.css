@@ -1,0 +1,89 @@
+/* PC */
+@media (min-width: 1024px) {
+  #navbar .search-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+  }
+}
+/* Table */
+@media (min-width: 740px) and (max-width: 1023px) {
+  #navbar .search-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+  }
+}
+/* Mobile */
+@media (max-width: 739px) {
+  #navbar {
+    flex-direction: column;
+  }
+
+  #navbar {
+    height: 46px;
+    overflow: hidden;
+  }
+
+  #navbar #more {
+    display: none;
+  }
+
+  #navbar #merch {
+    display: flex;
+  }
+
+  #navbar .search-btn {
+    display: none;
+  }
+  #navbar #hamburger-btn {
+    color: #fff;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 24px;
+    height: 46px;
+  }
+  #navbar #hamburger-btn:hover {
+    color: #000;
+    background-color: #ccc;
+  }
+
+  #band .band-members {
+    flex-direction: column;
+    align-items: center;
+  }
+  #band .member-card {
+    width: 100%;
+  }
+
+  #tour .buy-tickets {
+    flex-direction: column;
+  }
+
+  #contact .contact-content {
+    flex-direction: column;
+  }
+  #contact .contact-info,
+  #contact .contact-form {
+    max-width: none;
+  }
+  #contact .name-email {
+    flex-direction: column;
+  }
+  #contact .name-email input {
+    max-width: none;
+  }
+
+  #navbar .open-menu {
+    height: auto;
+  }
+
+  #navbar a:hover {
+    width: 100%;
+  }
+  #navbar a:first-child:hover {
+    max-width: fit-content;
+  }
+}

@@ -49,6 +49,10 @@ button {
   z-index: 1;
 }
 
+#navbar .mobile-dropdown {
+  display: none;
+}
+
 #navbar a {
   font-size: 15px;
   text-transform: uppercase;
@@ -57,7 +61,7 @@ button {
   justify-content: center;
 }
 
-#navbar .search-btn {
+#navbar #navbar .search-btn {
   position: absolute;
   right: 0;
   margin-right: 15px;
@@ -73,6 +77,11 @@ button {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+#navbar #merch,
+#navber .hamburger-btn {
+  display: none;
 }
 
 #navbar .drop-down {

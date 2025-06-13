@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assests/css/style.css" />
+    <link rel="stylesheet" href="assests/css/responsive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,8 +25,9 @@
         <a href="#band">Band</a>
         <a href="#tour">Tour</a>
         <a href="#contact">Contact</a>
+        <a href="#" id="merch">Merch</a>
         <div id="more">
-          <a href="">More <i class="fa fa-caret-down"></i> </a>
+          <a href="#">More <i class="fa fa-caret-down"></i> </a>
           <div class="drop-down">
             <a href="">Merchandise</a>
             <a href="">Extras</a>
@@ -33,7 +35,9 @@
           </div>
         </div>
         <a href="" class="search-btn"><i class="fa fa-search"></i></a>
+        <div id="hamburger-btn"><i class="fa fa-bars"></i></div>
       </div>
+
       <!-- Navber end -->
     </header>
     <main>
@@ -219,5 +223,28 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      var navbar = document.getElementById("navbar");
+
+      var mobileMenu = document.getElementById("hamburger-btn");
+      var navbarHeight = navbar.clientHeight;
+
+      mobileMenu.onclick = function () {
+        var isClosed = navbar.clientHeight == navbarHeight;
+        if (isClosed) {
+          navbar.style.height = "auto";
+        } else {
+          navbar.style.height = navbarHeight + "px";
+        }
+      };
+      var navbarItems = document.querySelectorAll('#navbar a[href*="#"]');
+      for (var i = 0; i < navbarItems.length; i++) {
+        var navbarItem = navbarItems[i];
+        navbarItem.onclick = function () {
+          navbar.style.height = navbarHeight + "px";
+        };
+      }
+    </script>
   </body>
 </html>
